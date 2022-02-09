@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import SearchBar from './components/Searchbar/Searchbar';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -10,7 +9,6 @@ import Button from './components/Button/Button';
 import Spinner from './components/Loader/Loader';
 import Modal from './components/Modal/Modal';
 import Loader from './components/Loader/Loader';
-// import 'App.module.css';
 
 export class App extends Component {
   state = {
@@ -30,8 +28,6 @@ export class App extends Component {
       images: [],
       error: null,
     });
-    // console.log(query);
-    // console.log(api);
   };
 
   fetchImages = () => {
@@ -121,16 +117,5 @@ export class App extends Component {
     );
   }
 }
-
-App.propTypes = {
-  searchQuery: PropTypes.string,
-  images: PropTypes.arrayOf(PropTypes.object),
-  currentPage: PropTypes.number,
-  isLoading: PropTypes.bool,
-  error: PropTypes.object,
-  showModal: PropTypes.bool,
-  bigImageUrl: PropTypes.string,
-  imageStatus: PropTypes.string,
-};
 
 export default App;
